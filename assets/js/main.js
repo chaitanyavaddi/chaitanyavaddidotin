@@ -12,13 +12,8 @@
 
   var stored = null;
   try { stored = localStorage.getItem("cv-theme"); } catch (e) {}
-  if (stored === "dark" || stored === "light") {
-    root.setAttribute("data-theme", stored);
-  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    root.setAttribute("data-theme", "dark");
-  } else {
-    root.setAttribute("data-theme", "light");
-  }
+  // Dark is the default; only an explicit "light" preference switches away from it.
+  root.setAttribute("data-theme", stored === "light" ? "light" : "dark");
 
   document.addEventListener("DOMContentLoaded", function () {
     var toggle = document.querySelector(".theme-toggle");

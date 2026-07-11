@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://chaitanyavaddi.in/assets/img/art-forest.webp">
 
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <script>(function(){try{var t=localStorage.getItem("cv-theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
+  <script>(function(){try{var t=localStorage.getItem("cv-theme");if(t!=="dark"&&t!=="light"){t="dark"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -68,7 +68,7 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/">chaitanya<span class="brand-dot">vaddi</span><span class="brand-tld">.in</span></a>
+      <a class="brand" href="/">Chaitanya <span class="brand-dot">Vaddi</span></a>
       <nav class="site-nav" aria-label="Main">
         <a href="/services.html">Services</a>
         <a href="/#work">Work</a>
@@ -94,7 +94,7 @@
       <div class="wrap">
         <div class="hero-inner">
           <p class="eyebrow">Chaitanya Vaddi · Software Engineer · Hyderabad, India</p>
-          <h1>Good software, <span class="accent">built quietly</span>.</h1>
+          <h1>Good software,<br><span class="accent">built quietly.</span></h1>
           <p class="hero-sub">I build web applications, APIs and SaaS products with Python, Django and FastAPI. Whatever skill I have is a gift I did not earn, so I try to use it well: honest scope, dependable code, and work you can rely on every day.</p>
           <div class="hero-actions">
             <a class="btn btn-solid" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -102,30 +102,21 @@
           </div>
           <p class="hero-status"><span class="status-dot"></span> Taking new work · replies within 24 hours</p>
         </div>
-        <figure class="art-frame reveal">
-          <img src="/assets/img/art-forest.webp" alt="Digital artwork of white birds flying over a teal green forest and river" width="1800" height="1013" fetchpriority="high">
-          <figcaption class="art-caption">
-            <span>fig. 01 · <b>they will soar on wings like eagles</b> · isaiah 40:31</span>
-            <span>working from hyderabad · utc +5:30</span>
-          </figcaption>
-        </figure>
+        <div class="hero-portrait reveal">
+          <img src="/assets/img/cv-hero.webp" alt="Chaitanya Vaddi, software engineer" width="956" height="1409" fetchpriority="high">
+        </div>
       </div>
     </section>
 
-    <!-- ============ INTRO WITH PHOTO ============ -->
+    <!-- ============ INTRO ============ -->
     <section class="section">
       <div class="wrap">
-        <div class="intro reveal">
-          <div class="intro-photo">
-            <img src="/assets/img/headshot.webp" alt="Chaitanya Vaddi, software engineer" width="720" height="875" loading="lazy">
-          </div>
-          <div class="intro-body">
-            <p class="eyebrow">Hello</p>
-            <h2>I am Chaitanya, and I would rather show you working software than sell you a pitch.</h2>
-            <p>Six years building and testing production systems taught me to write applications like a developer and break them like a test engineer, so what I hand over comes with tests, pipelines and monitoring already in place. One person, full ownership, plain words.</p>
-            <a class="link-arrow" href="/about.html">More about me <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <p class="intro-sign">soli deo gloria · the work is his, the effort is mine</p>
-          </div>
+        <div class="intro-body reveal" style="max-width:660px">
+          <p class="eyebrow">Hello</p>
+          <h2>I am Chaitanya, and I would rather show you working software than sell you a pitch.</h2>
+          <p>Over seven years building and testing production systems taught me to write applications like a developer and break them like a test engineer, so what I hand over comes with tests, pipelines and monitoring already in place. One person, full ownership, plain words.</p>
+          <a class="link-arrow" href="/about.html">More about me <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <p class="intro-sign">soli deo gloria · the work is his, the effort is mine</p>
         </div>
       </div>
     </section>
@@ -138,38 +129,30 @@
           <h2>What I can do for you</h2>
           <p>No rate cards and no surprises. Tell me what you need on a quick call, and you will get a written scope, timeline and fixed quote before any payment is made.</p>
         </div>
-        <div class="svc-list">
-          <article class="svc-row reveal">
+        <div class="svc-grid">
+          <article class="svc-card reveal">
             <span class="svc-num">/01</span>
-            <div class="svc-main">
-              <h3><a href="/services.html#web-apps">Web application development</a></h3>
-              <p>Custom Django or FastAPI applications: authentication, dashboards, admin panels, background jobs and deployment.</p>
-            </div>
-            <span class="svc-cta">book a call →</span>
+            <h3><a href="/services.html#web-apps">Web application development</a></h3>
+            <p>Custom Django or FastAPI applications: authentication, dashboards, admin panels, background jobs and deployment.</p>
+            <a class="svc-book" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
-          <article class="svc-row reveal" data-delay="50">
+          <article class="svc-card reveal" data-delay="50">
             <span class="svc-num">/02</span>
-            <div class="svc-main">
-              <h3><a href="/services.html#saas-mvp">SaaS MVP development</a></h3>
-              <p>Multi-tenant products with subdomains or custom domains, subscription billing, email and an admin back office.</p>
-            </div>
-            <span class="svc-cta">book a call →</span>
+            <h3><a href="/services.html#saas-mvp">SaaS MVP development</a></h3>
+            <p>Multi-tenant products with subdomains or custom domains, subscription billing, email and an admin back office.</p>
+            <a class="svc-book" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
-          <article class="svc-row reveal" data-delay="100">
+          <article class="svc-card reveal" data-delay="100">
             <span class="svc-num">/03</span>
-            <div class="svc-main">
-              <h3><a href="/services.html#apis">API design and integration</a></h3>
-              <p>REST APIs, payment gateways, third party integrations, webhooks and clean documentation.</p>
-            </div>
-            <span class="svc-cta">book a call →</span>
+            <h3><a href="/services.html#apis">API design and integration</a></h3>
+            <p>REST APIs, payment gateways, third party integrations, webhooks and clean documentation.</p>
+            <a class="svc-book" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
-          <article class="svc-row reveal" data-delay="150">
+          <article class="svc-card reveal" data-delay="150">
             <span class="svc-num">/04</span>
-            <div class="svc-main">
-              <h3><a href="/services.html#websites">Websites and care plans</a></h3>
-              <p>Fast, SEO ready business websites, plus monthly care plans for products already in production.</p>
-            </div>
-            <span class="svc-cta">book a call →</span>
+            <h3><a href="/services.html#websites">Websites and care plans</a></h3>
+            <p>Fast, SEO ready business websites, plus monthly care plans for products already in production.</p>
+            <a class="svc-book" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
         </div>
         <p style="margin-top:28px" class="reveal"><a class="link-arrow" href="/services.html">See how I work and how quoting goes <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
@@ -271,7 +254,7 @@
     <div class="wrap">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="/">chaitanya<span class="brand-dot">vaddi</span><span class="brand-tld">.in</span></a>
+          <a class="brand" href="/">Chaitanya <span class="brand-dot">Vaddi</span></a>
           <p>Software engineer in Hyderabad, India. Python, Django and FastAPI, for clients worldwide.</p>
         </div>
         <div class="footer-col">
