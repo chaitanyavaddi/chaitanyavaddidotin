@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Source originals (not needed for the deployed site; optimized copies live in assets/img)
+headshot.png
+cv-half.png
+sdet_chaitanya_vaddi_v3.pdf
+vibe/
