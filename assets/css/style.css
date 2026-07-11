@@ -294,11 +294,11 @@ body::after {
   70%, 100% { transform: scale(1.5); opacity: 0; }
 }
 
-/* hero portrait (transparent cutout, no panel, blends into page) */
+/* hero portrait (faithful photo, edges feathered into the page, no box) */
 .hero-portrait {
   position: relative;
   align-self: stretch;
-  min-height: 440px;
+  min-height: 460px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -307,17 +307,14 @@ body::after {
   height: 100%;
   width: auto;
   max-width: 100%;
-  object-fit: contain;
-  object-position: bottom center;
-  filter: drop-shadow(0 16px 36px rgba(0, 0, 0, 0.28));
+  border-radius: var(--radius-lg);
 }
-[data-theme="dark"] .hero-portrait img { filter: none; }
 
 @media (max-width: 820px) {
   .hero .wrap { grid-template-columns: 1fr; gap: 28px; }
   .hero-inner { order: 1; }
   .hero-portrait { order: 2; min-height: 0; }
-  .hero-portrait img { max-height: 460px; }
+  .hero-portrait img { max-height: 480px; }
 }
 
 /* ---------- sections ---------- */
