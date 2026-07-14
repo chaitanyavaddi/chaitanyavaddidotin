@@ -71,7 +71,7 @@
     <section class="hero">
       <div class="wrap">
         <div class="hero-inner">
-          <p class="eyebrow">Chaitanya Vaddi · Software Engineer · Hyderabad, India</p>
+          <p class="eyebrow">Chaitanya Vaddi · Software Engineer · India</p>
           <h1>Good software,<br><span class="accent">built quietly.</span></h1>
           <p class="hero-sub">I build web applications, APIs and SaaS products with Python, Django and FastAPI. Whatever skill I have is a gift I did not earn, so I try to use it well: honest scope, dependable code, and work you can rely on every day.</p>
           <div class="hero-actions">
@@ -91,7 +91,7 @@
       <div class="wrap">
         <div class="intro-body reveal" style="max-width:660px">
           <p class="eyebrow">Hello</p>
-          <h2>I am Chaitanya, and I would rather show you working software than sell you a pitch.</h2>
+          <h2 class="reveal-text">I am Chaitanya, and I would rather show you working software than sell you a pitch.</h2>
           <p>Over seven years building and testing production systems taught me to write applications like a developer and break them like a test engineer, so what I hand over comes with tests, pipelines and monitoring already in place. One person, full ownership, plain words.</p>
           <a class="link-arrow" href="/about.html">More about me <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <p class="intro-sign">soli deo gloria · the work is his, the effort is mine</p>
@@ -105,35 +105,47 @@
         <div class="section-head reveal">
           <p class="eyebrow">Services</p>
           <h2>What I can do for you</h2>
-          <p>A quick taste below. The <a href="/services.html" style="color:var(--accent)">full menu</a> breaks each area into categories, stacks and real examples, so you can point at what you need.</p>
+          <p>Six areas, each with its own categories, stacks and real examples. Open any one to see what it looks like.</p>
         </div>
-        <div class="svc-grid">
-          <article class="svc-card reveal">
-            <span class="svc-num">/01</span>
-            <h3><a href="/services.html#web-apps">Web application development</a></h3>
-            <p>Custom Django or FastAPI applications: authentication, dashboards, admin panels, background jobs and deployment.</p>
-            <a class="svc-book" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </article>
-          <article class="svc-card reveal" data-delay="50">
-            <span class="svc-num">/02</span>
-            <h3><a href="/services.html#saas-mvp">SaaS MVP development</a></h3>
-            <p>Multi-tenant products with subdomains or custom domains, subscription billing, email and an admin back office.</p>
-            <a class="svc-book" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </article>
-          <article class="svc-card reveal" data-delay="100">
-            <span class="svc-num">/03</span>
-            <h3><a href="/services.html#apis">API design and integration</a></h3>
-            <p>REST APIs, payment gateways, third party integrations, webhooks and clean documentation.</p>
-            <a class="svc-book" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </article>
-          <article class="svc-card reveal" data-delay="150">
-            <span class="svc-num">/04</span>
-            <h3><a href="/services.html#websites">Websites and care plans</a></h3>
-            <p>Fast, SEO ready business websites, plus monthly care plans for products already in production.</p>
-            <a class="svc-book" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </article>
+        <div class="disc-grid">
+          <a class="disc-card reveal" href="/services.html#web" style="--chap:#1f9c78; --chap2:#17b3a2">
+            <span class="n">01</span>
+            <h3>Web Development</h3>
+            <p>Static sites, custom sites, WordPress and full-stack apps.</p>
+            <span class="go">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="disc-card reveal" data-delay="50" href="/services.html#ai" style="--chap:#2f8fd0; --chap2:#37c6cf">
+            <span class="n">02</span>
+            <h3>AI Systems</h3>
+            <p>Knowledge assistants, chatbots, agents and AI features.</p>
+            <span class="go">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="disc-card reveal" data-delay="100" href="/services.html#data" style="--chap:#4a7bd0; --chap2:#2f9fd0">
+            <span class="n">03</span>
+            <h3>Data Engineering</h3>
+            <p>Pipelines, dashboards, scraping and reporting APIs.</p>
+            <span class="go">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="disc-card reveal" href="/services.html#qa" style="--chap:#16a394; --chap2:#35c07a">
+            <span class="n">04</span>
+            <h3>QA &amp; Test Automation</h3>
+            <p>UI, API and DB testing, agentic QA and CI pipelines.</p>
+            <span class="go">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="disc-card reveal" data-delay="50" href="/services.html#devops" style="--chap:#5b7cc9; --chap2:#46a7d0">
+            <span class="n">05</span>
+            <h3>DevOps &amp; Infra</h3>
+            <p>Docker, CI/CD, cloud deployment and monitoring.</p>
+            <span class="go">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="disc-card reveal" data-delay="100" href="/services.html#mobile" style="--chap:#12a19a; --chap2:#24c39c">
+            <span class="n">06</span>
+            <h3>Mobile Apps</h3>
+            <p>Cross-platform apps, PWAs and mobile backends.</p>
+            <span class="go">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
         </div>
-        <p style="margin-top:28px" class="reveal"><a class="link-arrow" href="/services.html">See how I work and how quoting goes <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+        <p style="margin-top:28px" class="reveal"><a class="link-arrow" href="/services.html">See the full menu, with examples and pricing <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
       </div>
     </section>
 

@@ -193,6 +193,35 @@
     wrap.appendChild(box);
   });
 
+  /* ---------- scroll-driven left-to-right text fill ---------- */
+  var rt = document.querySelector(".reveal-text");
+  if (rt) {
+    var words = rt.textContent.trim().split(/\s+/);
+    rt.innerHTML = words.map(function (w) { return '<span class="rw">' + w + "</span>"; }).join(" ");
+    var rws = rt.querySelectorAll(".rw");
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      rws.forEach(function (s) { s.classList.add("on"); });
+    } else {
+      var paint = function () {
+        var r = rt.getBoundingClientRect();
+        var vh = window.innerHeight || document.documentElement.clientHeight;
+        var start = vh * 0.82, end = vh * 0.42;
+        var p = (start - r.top) / (start - end);
+        p = Math.max(0, Math.min(1, p));
+        var n = Math.round(p * rws.length);
+        rws.forEach(function (s, i) { s.classList.toggle("on", i < n); });
+      };
+      var ticking = false;
+      var onScroll = function () {
+        if (!ticking) { requestAnimationFrame(function () { paint(); ticking = false; }); ticking = true; }
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+      paint();
+    }
+  }
+
   /* ---------- "+N more" on domains and stacks ---------- */
   var DOMAIN_MORE = [40, 30, 25, 50, 20, 35];
   var STACK_MORE = [15, 12, 20, 9, 18, 14];
