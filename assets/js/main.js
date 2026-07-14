@@ -7,10 +7,10 @@
 
   var root = document.documentElement;
 
-  /* ---------- theme (dark is the default) ---------- */
+  /* ---------- theme (light is the default) ---------- */
   var stored = null;
   try { stored = localStorage.getItem("cv-theme"); } catch (e) {}
-  root.setAttribute("data-theme", stored === "light" ? "light" : "dark");
+  root.setAttribute("data-theme", stored === "dark" ? "dark" : "light");
 
   /* ---------- shared markup ---------- */
   var CAL = "https://cal.com/chaitanyavaddi/project-enquiry";
@@ -191,6 +191,33 @@
     box.innerHTML = '<span class="logos-label">Apps like</span>' +
       '<div class="marq"><div class="marq-track">' + chips + chips + '</div></div>';
     wrap.appendChild(box);
+  });
+
+  /* ---------- logo wall ("apps like these", each links to the app) ---------- */
+  var WALL = [
+    "flipkart.com", "amazon.com", "myntra.com", "meesho.com", "nykaa.com", "ajio.com",
+    "zomato.com", "swiggy.com", "ubereats.com", "uber.com", "olacabs.com", "rapido.bike",
+    "airbnb.com", "booking.com", "makemytrip.com", "oyorooms.com", "bookmyshow.com", "goibibo.com",
+    "netflix.com", "hotstar.com", "spotify.com", "youtube.com", "primevideo.com", "twitch.tv",
+    "instagram.com", "whatsapp.com", "telegram.org", "linkedin.com", "x.com", "pinterest.com",
+    "slack.com", "discord.com", "notion.so", "figma.com", "canva.com", "trello.com",
+    "shopify.com", "stripe.com", "razorpay.com", "paytm.com", "phonepe.com", "cred.club",
+    "zerodha.com", "groww.in", "coinbase.com", "upstox.com",
+    "coursera.org", "udemy.com", "unacademy.com", "practo.com"
+  ];
+  var LOGO_TOKEN_WALL = "pk_bHEnuVSETzOGsD2S3iKRGg";
+  function wallName(d) {
+    var n = d.split(".")[0];
+    return n.charAt(0).toUpperCase() + n.slice(1);
+  }
+  function wallTile(d) {
+    return '<a class="lw-tile" href="https://' + d + '" target="_blank" rel="noopener" title="' + wallName(d) + '">' +
+      '<img class="lw-logo" loading="lazy" src="https://img.logo.dev/' + d + '?token=' + LOGO_TOKEN_WALL + '&size=48&format=png&retina=true&fallback=monogram" alt="' + wallName(d) + ' logo">' +
+      '<span class="lw-name">' + wallName(d) + '</span></a>';
+  }
+  document.querySelectorAll("[data-logowall]").forEach(function (el) {
+    el.innerHTML = WALL.map(wallTile).join("") +
+      '<span class="lw-tile lw-more">+200 more</span>';
   });
 
   /* ---------- scroll-driven left-to-right text fill ---------- */
