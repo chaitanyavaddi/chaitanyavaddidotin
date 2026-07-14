@@ -136,27 +136,60 @@
   var yearEl = document.querySelector("[data-year]");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---------- CSS mockups for capability examples ---------- */
-  var dots = '<div class="bar"><i></i><i></i><i></i></div>';
-  function rep(html, n) { var s = ""; for (var i = 0; i < n; i++) s += html; return s; }
-  var MK = {
-    web: dots + '<div class="in"><div class="hero"></div><div class="row"><div class="ln"></div></div><div class="row"><div class="ln s"></div><div class="ln xs hl"></div></div></div>',
-    grid: dots + '<div class="in"><div class="tiles">' + rep("<span></span>", 6) + '</div></div>',
-    dash: dots + '<div class="in"><div class="kpis"><span></span><span></span><span></span></div><div class="bars">' + rep("<b></b>", 7) + '</div></div>',
-    doc: '<div class="side"><div class="col"></div><div class="doc"><div class="ln s hl"></div><div class="ln"></div><div class="ln"></div><div class="ln s"></div><div class="ln"></div></div></div>',
-    chat: dots + '<div class="in"><div class="bub you"></div><div class="bub me"></div><div class="bub you" style="width:58%"></div><div class="bub me" style="width:44%"></div></div>',
-    flow: dots + '<div class="in"><div class="flow"><span class="n"></span><span class="c"></span><span class="n"></span><span class="c"></span><span class="n"></span></div><div class="row"><div class="ln"></div></div><div class="row"><div class="ln s"></div></div></div>',
-    rows: dots + '<div class="in">' + rep('<div class="row"><div class="ln xs"></div><div class="ln"></div></div>', 4) + '</div>',
-    test: dots + '<div class="in"><div class="row"><span class="dot"></span><div class="ln"></div></div><div class="row"><span class="dot"></span><div class="ln s"></div></div><div class="row"><span class="dot f"></span><div class="ln"></div></div><div class="row"><span class="dot"></span><div class="ln s"></div></div></div>',
-    code: dots + '<div class="in"><div class="row"><div class="ln xs hl"></div></div><div class="row"><div class="ln s"></div></div><div class="row"><div class="ln"></div></div><div class="row"><div class="ln s"></div><div class="ln xs"></div></div><div class="row"><div class="ln xs hl"></div></div></div>',
-    api: dots + '<div class="in"><div class="row"><span class="method">GET</span><div class="ln"></div></div><div class="row"><span class="method">POST</span><div class="ln s"></div></div><div class="row"><span class="method">GET</span><div class="ln"></div></div></div>',
-    chart: dots + '<div class="in"><div class="row"><div class="ln xs hl"></div></div><div class="area"></div></div>',
-    phone: '<div class="phone"><div class="ln s hl"></div><div class="ln"></div><div class="ln s"></div><div class="tiles" style="grid-template-columns:1fr 1fr"><span></span><span></span></div></div>'
+  /* ---------- capability example images (real photos, per discipline) ---------- */
+  function discOf(el) { var s = el.closest("section[id]"); return s ? s.id : ""; }
+  var IMG = {
+    web: ["/assets/img/svc/web1.webp", "/assets/img/svc/web2.webp", "/assets/img/svc/web3.webp", "/assets/img/svc/web4.webp", "/assets/img/svc/web5.webp", "/assets/img/svc/web6.webp"],
+    ai: ["/assets/img/svc/ai1.webp", "/assets/img/svc/ai2.webp", "/assets/img/svc/ai3.webp", "/assets/img/svc/ai4.webp", "/assets/img/svc/ai5.webp", "/assets/img/svc/ai6.webp"],
+    data: ["/assets/img/svc/data1.webp", "/assets/img/svc/data2.webp", "/assets/img/svc/data3.webp", "/assets/img/svc/data4.webp", "/assets/img/svc/data5.webp"],
+    qa: ["/assets/img/svc/qa1.webp", "/assets/img/svc/qa2.webp", "/assets/img/svc/qa3.webp", "/assets/img/svc/qa4.webp", "/assets/img/svc/qa5.webp"],
+    devops: ["/assets/img/svc/devops1.webp", "/assets/img/svc/devops2.webp", "/assets/img/svc/devops3.webp", "/assets/img/svc/devops4.webp", "/assets/img/svc/devops5.webp"],
+    mobile: ["/assets/img/svc/mobile1.webp", "/assets/img/svc/mobile2.webp", "/assets/img/svc/mobile3.webp", "/assets/img/svc/mobile4.webp", "/assets/img/svc/mobile5.webp", "/assets/img/svc/mobile6.webp"]
   };
-  var mks = document.querySelectorAll("[data-mk]");
-  mks.forEach(function (el) {
-    var t = el.getAttribute("data-mk");
-    el.className = "mk";
-    el.innerHTML = MK[t] || MK.web;
+  var imgCount = {};
+  document.querySelectorAll(".ex-thumb [data-mk]").forEach(function (el) {
+    var d = discOf(el);
+    var pool = IMG[d];
+    var thumb = el.parentNode;
+    if (!pool || !pool.length) { el.remove(); return; }
+    imgCount[d] = imgCount[d] || 0;
+    var src = pool[imgCount[d] % pool.length];
+    imgCount[d]++;
+    var card = thumb.closest(".ex-card");
+    var nm = card && card.querySelector(".ex-name");
+    var img = document.createElement("img");
+    img.className = "ex-img";
+    img.src = src;
+    img.loading = "lazy";
+    img.width = 480; img.height = 300;
+    img.alt = nm ? nm.textContent : "";
+    thumb.replaceChild(img, el);
+  });
+
+  /* ---------- logo marquees ("apps like ...") via logo.dev ---------- */
+  var LOGO_TOKEN = "pk_bHEnuVSETzOGsD2S3iKRGg";
+  var LOGOS = {
+    web: ["flipkart.com", "meesho.com", "myntra.com", "zomato.com", "swiggy.com", "nykaa.com", "airbnb.com", "booking.com", "shopify.com", "notion.so", "medium.com", "cred.club", "zerodha.com", "bookmyshow.com"],
+    ai: ["openai.com", "anthropic.com", "perplexity.ai", "github.com", "intercom.com", "zendesk.com", "hubspot.com", "jasper.ai", "notion.so", "grammarly.com", "midjourney.com", "harvey.ai"],
+    data: ["snowflake.com", "databricks.com", "tableau.com", "looker.com", "segment.com", "fivetran.com", "airbyte.com", "metabase.com", "amplitude.com", "mixpanel.com", "getdbt.com", "grafana.com"],
+    qa: ["playwright.dev", "cypress.io", "selenium.dev", "browserstack.com", "saucelabs.com", "postman.com", "testrail.com", "circleci.com", "github.com", "sentry.io"],
+    devops: ["docker.com", "kubernetes.io", "aws.amazon.com", "cloud.google.com", "cloudflare.com", "gitlab.com", "github.com", "jenkins.io", "hashicorp.com", "grafana.com", "datadoghq.com", "digitalocean.com"],
+    mobile: ["swiggy.com", "zomato.com", "uber.com", "olacabs.com", "phonepe.com", "paytm.com", "whatsapp.com", "instagram.com", "flipkart.com", "meesho.com", "cred.club", "dream11.com"]
+  };
+  function logoChip(domain) {
+    return '<span class="logo-chip"><img loading="lazy" onerror="this.parentNode.style.display=\'none\'" ' +
+      'src="https://img.logo.dev/' + domain + '?token=' + LOGO_TOKEN + '&size=48&format=png&retina=true" ' +
+      'alt="' + domain + '"></span>';
+  }
+  document.querySelectorAll(".shelf-wrap").forEach(function (wrap) {
+    var d = discOf(wrap);
+    var set = LOGOS[d];
+    if (!set || !set.length) return;
+    var chips = set.map(logoChip).join("");
+    var box = document.createElement("div");
+    box.className = "logos";
+    box.innerHTML = '<span class="logos-label">Apps like</span>' +
+      '<div class="marq"><div class="marq-track">' + chips + chips + '</div></div>';
+    wrap.appendChild(box);
   });
 })();
