@@ -856,17 +856,31 @@ a.contact-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); b
   margin-bottom: 12px;
   padding-bottom: 26px;
   border-bottom: 2px solid color-mix(in srgb, var(--chap) 38%, var(--line));
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
 }
-.chapter-num {
-  position: absolute;
-  top: -30px; right: -6px;
+.chapter-no {
+  flex: none;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(5rem, 14vw, 11rem);
-  line-height: 1;
-  color: color-mix(in srgb, var(--chap) 13%, transparent);
-  pointer-events: none;
-  z-index: 0;
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  color: var(--chap);
+  position: relative; z-index: 1;
+}
+.chapter-headtext { flex: 1; min-width: 0; }
+.chapter-krow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.price {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--chap);
+  background: color-mix(in srgb, var(--chap) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--chap) 34%, transparent);
+  border-radius: 999px;
+  padding: 5px 12px;
 }
 .chapter-head .k {
   display: inline-flex;
@@ -979,6 +993,13 @@ a.contact-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); b
   border-radius: 6px;
   padding: 4px 9px;
 }
+.tag.more, .chip.more {
+  color: var(--chap);
+  background: transparent;
+  border: 1px dashed color-mix(in srgb, var(--chap) 45%, transparent);
+  font-weight: 500;
+}
+.tag.more::before { display: none; }
 
 /* example shelf */
 .shelf-wrap { position: relative; min-width: 0; }

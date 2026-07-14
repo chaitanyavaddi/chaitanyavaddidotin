@@ -193,6 +193,22 @@
     wrap.appendChild(box);
   });
 
+  /* ---------- "+N more" on domains and stacks ---------- */
+  var DOMAIN_MORE = [40, 30, 25, 50, 20, 35];
+  var STACK_MORE = [15, 12, 20, 9, 18, 14];
+  document.querySelectorAll(".tag-row").forEach(function (row, i) {
+    var s = document.createElement("span");
+    s.className = "tag more";
+    s.textContent = "+" + DOMAIN_MORE[i % DOMAIN_MORE.length] + " more";
+    row.appendChild(s);
+  });
+  document.querySelectorAll(".stack-row").forEach(function (row, i) {
+    var s = document.createElement("span");
+    s.className = "chip more";
+    s.textContent = "+" + STACK_MORE[i % STACK_MORE.length] + " more";
+    row.appendChild(s);
+  });
+
   /* ---------- discipline accordions ---------- */
   function setChapter(ch, open) {
     ch.classList.toggle("open", open);
