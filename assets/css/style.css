@@ -810,3 +810,204 @@ a.contact-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); b
 }
 .skip-link:focus { top: 12px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ============================================================
+   Capabilities menu (services page)
+   Discipline > Sub-category > Domains > Stack > Examples
+   Per-chapter accent set inline via --chap.
+   ============================================================ */
+
+/* sticky discipline index */
+.cap-index {
+  position: sticky;
+  top: 64px;
+  z-index: 60;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.cap-index .wrap { display: flex; gap: 8px; overflow-x: auto; padding-top: 12px; padding-bottom: 12px; scrollbar-width: none; }
+.cap-index .wrap::-webkit-scrollbar { display: none; }
+.cap-index a {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 7px 14px;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.cap-index a .idx { color: var(--ink-3); }
+.cap-index a:hover { color: var(--ink); border-color: var(--ink); }
+
+/* chapter */
+.chapter { padding: 76px 0; border-top: 1px solid var(--line); position: relative; overflow: hidden; }
+.chapter-alt { background: var(--surface); }
+.chapter-head { position: relative; margin-bottom: 34px; }
+.chapter-num {
+  position: absolute;
+  top: -34px; right: -6px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(5rem, 14vw, 11rem);
+  line-height: 1;
+  color: color-mix(in srgb, var(--chap) 12%, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+.chapter-head .k {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--chap);
+  position: relative; z-index: 1;
+}
+.chapter-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+  font-weight: 640;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin-top: 10px;
+  max-width: 20ch;
+  position: relative; z-index: 1;
+}
+.chapter-head p { color: var(--ink-2); margin-top: 12px; max-width: 60ch; position: relative; z-index: 1; }
+
+/* sub-category */
+.subcat {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+}
+.subcat:first-of-type { border-top: 1px dashed var(--line-strong); }
+.subcat-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 620;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.subcat-info > p { color: var(--ink-2); font-size: 0.95rem; margin-top: 8px; }
+.meta-label {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 16px 0 8px;
+}
+.tag-row, .stack-row { display: flex; flex-wrap: wrap; gap: 7px; }
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--ink-2);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 4px 11px;
+}
+.tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--chap); flex: none; }
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-2);
+  background: var(--surface-2);
+  border-radius: 6px;
+  padding: 4px 9px;
+}
+
+/* example shelf */
+.shelf-wrap { position: relative; min-width: 0; }
+.shelf {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2px 2px 12px;
+  scrollbar-width: thin;
+}
+.shelf::-webkit-scrollbar { height: 6px; }
+.shelf::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 6px; }
+.shelf::-webkit-scrollbar-track { background: transparent; }
+.ex-card {
+  scroll-snap-align: start;
+  flex: 0 0 216px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+  overflow: hidden;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s ease;
+}
+.ex-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--line-strong); }
+.ex-thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: color-mix(in srgb, var(--chap) 9%, var(--surface));
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.ex-meta { padding: 12px 14px 14px; }
+.ex-name { font-weight: 600; font-size: 0.92rem; letter-spacing: -0.005em; }
+.ex-desc { color: var(--ink-2); font-size: 0.8rem; margin-top: 3px; line-height: 1.5; }
+
+.chapter-cta { margin-top: 30px; position: relative; z-index: 1; }
+.chapter-cta .link-arrow { color: var(--chap); }
+
+@media (max-width: 760px) {
+  .subcat { grid-template-columns: 1fr; gap: 16px; }
+  .chapter { padding: 60px 0; }
+}
+
+/* ---------- CSS mockups (rendered into [data-mk]) ---------- */
+.mk {
+  position: absolute;
+  left: 16px; right: 16px; bottom: 0; top: 15px;
+  border: 1px solid var(--line-strong);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background: var(--card);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+.mk .bar { height: 15px; display: flex; align-items: center; gap: 3px; padding: 0 7px; border-bottom: 1px solid var(--line); }
+.mk .bar i { width: 4px; height: 4px; border-radius: 50%; background: var(--line-strong); }
+.mk .bar i:first-child { background: var(--chap); }
+.mk .in { padding: 9px; display: grid; gap: 6px; align-content: start; }
+.mk .row { display: flex; gap: 5px; align-items: center; }
+.mk .ln { height: 6px; border-radius: 3px; background: var(--surface-2); flex: 1; }
+.mk .ln.s { flex: 0 0 42%; } .mk .ln.xs { flex: 0 0 24%; } .mk .ln.hl { background: var(--chap); opacity: 0.6; }
+.mk .hero { height: 26px; border-radius: 5px; background: color-mix(in srgb, var(--chap) 32%, var(--surface)); }
+.mk .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+.mk .tiles span { height: 22px; border-radius: 4px; background: var(--surface-2); }
+.mk .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+.mk .kpis span { height: 17px; border-radius: 4px; background: color-mix(in srgb, var(--chap) 22%, var(--surface)); }
+.mk .bars { display: flex; align-items: flex-end; gap: 4px; height: 32px; margin-top: 2px; }
+.mk .bars b { flex: 1; background: var(--chap); opacity: 0.5; border-radius: 2px 2px 0 0; }
+.mk .side { display: grid; grid-template-columns: 26px 1fr; gap: 7px; height: 100%; }
+.mk .side .col { background: var(--surface-2); border-radius: 0; }
+.mk .side .doc { display: grid; gap: 6px; align-content: start; padding: 9px 9px 9px 0; }
+.mk .bub { height: 9px; border-radius: 6px; background: var(--surface-2); }
+.mk .bub.me { background: var(--chap); opacity: 0.6; margin-left: auto; width: 55%; }
+.mk .bub.you { width: 72%; }
+.mk .flow { display: flex; align-items: center; gap: 3px; }
+.mk .flow .n { flex: 1; height: 20px; border-radius: 5px; background: color-mix(in srgb, var(--chap) 26%, var(--surface)); }
+.mk .flow .c { width: 5px; height: 2px; background: var(--line-strong); flex: none; }
+.mk .dot { width: 6px; height: 6px; border-radius: 50%; background: #3fb950; flex: none; }
+.mk .dot.f { background: #e5534b; }
+.mk .method { font-family: var(--font-mono); font-size: 5px; letter-spacing: 0.05em; color: var(--chap); border: 1px solid color-mix(in srgb, var(--chap) 40%, transparent); border-radius: 3px; padding: 1px 3px; flex: none; }
+.mk .phone { position: absolute; inset: 7px 30% 0; border: 1px solid var(--line-strong); border-bottom: 0; border-radius: 10px 10px 0 0; background: var(--card); padding: 7px; display: grid; gap: 5px; align-content: start; }
+.mk .area { height: 34px; margin-top: 4px; border-radius: 4px; background:
+  linear-gradient(180deg, color-mix(in srgb, var(--chap) 28%, transparent), transparent);
+  clip-path: polygon(0 70%, 15% 55%, 30% 62%, 45% 35%, 60% 48%, 75% 22%, 100% 38%, 100% 100%, 0 100%); }

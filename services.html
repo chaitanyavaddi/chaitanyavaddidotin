@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | Custom Software Development, Quoted Individually | Chaitanya Vaddi</title>
-  <meta name="description" content="Custom software development by Chaitanya Vaddi: web applications, SaaS MVPs, APIs, business websites and care plans. No rate cards. Every project gets a written scope, timeline and fixed quote before any payment.">
+  <title>Services | What I Can Build for You | Chaitanya Vaddi</title>
+  <meta name="description" content="A menu of what Chaitanya Vaddi can build: web development, AI systems, data engineering, QA and test automation, DevOps and infrastructure, and mobile apps. Categories, tech stacks and real-world examples for each.">
   <link rel="canonical" href="https://chaitanyavaddi.in/services.html">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chaitanyavaddi.in/services.html">
-  <meta property="og:title" content="Services | Chaitanya Vaddi">
-  <meta property="og:description" content="Web applications, SaaS MVPs, APIs, business websites and care plans. Scoped honestly, quoted in writing before any payment.">
+  <meta property="og:title" content="Services | What I Can Build | Chaitanya Vaddi">
+  <meta property="og:description" content="Web, AI, data, QA, DevOps and mobile. A clear menu of categories, stacks and example apps, so you can point at what you need.">
   <meta property="og:image" content="https://chaitanyavaddi.in/assets/img/headshot.webp">
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <script>(function(){try{var t=localStorage.getItem("cv-theme");if(t!=="dark"&&t!=="light"){t="dark"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
@@ -19,155 +19,540 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="/">Chaitanya <span class="brand-dot">Vaddi</span></a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="/services.html" aria-current="page">Services</a>
-        <a href="/#work">Work</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Toggle color theme">
-          <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        </button>
-        <a class="btn btn-solid header-cta" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call</a>
-        <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+<body data-page="services">
+  <div id="site-header"></div>
 
   <main id="main">
     <section class="page-hero">
       <div class="wrap">
         <p class="eyebrow">Services</p>
-        <h1>Scoped honestly, quoted in writing.</h1>
-        <p class="lede">There are no rate cards here, because two projects are never the same. Every engagement begins with a written scope, a timeline and a fixed quote before any payment is made. The price depends on what your project actually requires, nothing more.</p>
+        <h1>A menu of what I can build.</h1>
+        <p class="lede">Pick the area that sounds like your problem, then scan the examples. If something looks like what you need, we talk, and you get a written scope and a fixed quote. No rate cards, no jargon.</p>
       </div>
     </section>
 
-    <div class="prose-wrap prose">
-      <h2 id="web-apps">01. Web application development</h2>
-      <p>Custom web applications built with Django or FastAPI, from the first database table to the deployed product. Typical projects are internal tools, booking systems, learning platforms, CRMs and customer portals. I build carefully and test what I build, because you will rely on it every day.</p>
-      <ul>
-        <li>Authentication, roles and permissions</li>
-        <li>Dashboards, admin panels and reporting</li>
-        <li>Background jobs and scheduled tasks with Celery</li>
-        <li>PostgreSQL schema design and migrations</li>
-        <li>Docker based deployment with CI/CD</li>
-      </ul>
-      <p>Typical timeline: 3 to 6 weeks, depending on scope.</p>
-      <p><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+    <nav class="cap-index" aria-label="Disciplines">
+      <div class="wrap">
+        <a href="#web"><span class="idx">01</span> Web Development</a>
+        <a href="#ai"><span class="idx">02</span> AI Systems</a>
+        <a href="#data"><span class="idx">03</span> Data Engineering</a>
+        <a href="#qa"><span class="idx">04</span> QA &amp; Automation</a>
+        <a href="#devops"><span class="idx">05</span> DevOps &amp; Infra</a>
+        <a href="#mobile"><span class="idx">06</span> Mobile Apps</a>
+      </div>
+    </nav>
 
-      <h2 id="saas-mvp">02. SaaS MVP development</h2>
-      <p>A production ready first version of your SaaS product. I have built multi-tenant platforms for education, publishing and services businesses, and I will tell you plainly what belongs in a first version and what can wait.</p>
-      <ul>
-        <li>Multi-tenant setup: subdomain per customer or custom domains</li>
-        <li>Subscription billing with Razorpay or Stripe</li>
-        <li>Transactional email, onboarding flows and notifications</li>
-        <li>Admin back office for your team</li>
-        <li>Staging environment and weekly demo builds</li>
-      </ul>
-      <p>Typical timeline: 6 to 10 weeks, depending on scope.</p>
-      <p><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+    <!-- ============ 01 WEB ============ -->
+    <section class="chapter" id="web" style="--chap:#1f9c78">
+      <div class="wrap">
+        <div class="chapter-head">
+          <span class="chapter-num">01</span>
+          <p class="k">Discipline / 01</p>
+          <h2>Web Development</h2>
+          <p>From a single fast page to a full product with logins and dashboards. If it runs in a browser, I can build it and keep it running.</p>
+        </div>
 
-      <h2 id="apis">03. API design and integration</h2>
-      <p>APIs that other developers can pick up without asking questions. Built with FastAPI or Django, documented with OpenAPI, and tested before handover.</p>
-      <ul>
-        <li>REST API design and development</li>
-        <li>Payment gateway integration: Razorpay, Stripe and others</li>
-        <li>Third party integrations: WhatsApp, email, CRMs, ERPs</li>
-        <li>Webhooks, rate limiting and API keys</li>
-        <li>Automated test suite for every endpoint</li>
-      </ul>
-      <p>Typical timeline: 2 to 4 weeks, depending on scope.</p>
-      <p><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Static websites</h3>
+            <p>Fast, hand coded pages with no heavy CMS. Cheap to host, quick to load.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Restaurants</span><span class="tag">Clinics</span><span class="tag">Events</span><span class="tag">Portfolios</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Cloudflare Pages</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="web"></div></div><div class="ex-meta"><div class="ex-name">Restaurant one-pager</div><div class="ex-desc">Menu, timings and a map on a single quick page.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="web"></div></div><div class="ex-meta"><div class="ex-name">Event landing page</div><div class="ex-desc">Details, schedule and a sign-up call to action.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="web"></div></div><div class="ex-meta"><div class="ex-name">Personal portfolio</div><div class="ex-desc">A clean showcase like the one you are reading now.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="web"></div></div><div class="ex-meta"><div class="ex-name">Product launch page</div><div class="ex-desc">A focused page to announce and collect interest.</div></div></article>
+          </div></div>
+        </div>
 
-      <h2 id="websites">04. Business websites</h2>
-      <p>Hand coded static websites for businesses that want speed and search visibility without a heavy CMS. Deployed on Cloudflare Pages, which keeps hosting costs near zero.</p>
-      <ul>
-        <li>Custom design, no templates</li>
-        <li>SEO: meta tags, structured data, sitemap</li>
-        <li>Contact forms and WhatsApp integration</li>
-        <li>Domain and DNS setup included</li>
-        <li>Fast pages that score well on Lighthouse</li>
-      </ul>
-      <p>Typical timeline: 1 to 2 weeks.</p>
-      <p><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Custom websites</h3>
+            <p>Content you can edit yourself: blogs, listings and pages that change often.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Media</span><span class="tag">Education</span><span class="tag">Non-profits</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">Django</span><span class="chip">Jinja2</span><span class="chip">HTMX</span><span class="chip">PostgreSQL</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="doc"></div></div><div class="ex-meta"><div class="ex-name">News or blog site</div><div class="ex-desc">Publish articles with categories and search.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="doc"></div></div><div class="ex-meta"><div class="ex-name">School website</div><div class="ex-desc">Pages your team updates without a developer.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Business directory</div><div class="ex-desc">Searchable listings with profiles and filters.</div></div></article>
+          </div></div>
+        </div>
 
-      <h2 id="care-plans">05. Care plans and support</h2>
-      <p>For products already in production that need a steady hand. A care plan reserves time each month for features, fixes and improvements, so small problems are handled before they become large ones.</p>
-      <ul>
-        <li>Feature development and bug fixes</li>
-        <li>Performance tuning and database optimization</li>
-        <li>Monitoring, alerts and incident response</li>
-        <li>CI/CD pipelines and automated test coverage</li>
-        <li>Monthly report of work done and hours used</li>
-      </ul>
-      <p>Billed monthly, sized to what your product needs.</p>
-      <p><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>WordPress development</h3>
+            <p>When you want a familiar editor and a big plugin ecosystem.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Small business</span><span class="tag">Retail</span><span class="tag">Blogs</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">WordPress</span><span class="chip">WooCommerce</span><span class="chip">PHP</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="doc"></div></div><div class="ex-meta"><div class="ex-name">Business website</div><div class="ex-desc">A polished site you can edit from the dashboard.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="grid"></div></div><div class="ex-meta"><div class="ex-name">Online store</div><div class="ex-desc">Products, cart and checkout with WooCommerce.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="doc"></div></div><div class="ex-meta"><div class="ex-name">Blog migration</div><div class="ex-desc">Move an old blog over without losing content.</div></div></article>
+          </div></div>
+        </div>
 
-      <h2>How quoting and payment work</h2>
-      <ol>
-        <li>We start by booking a call, so I understand what you need before anything is priced.</li>
-        <li>You receive a written scope and fixed quote, with a timeline. Nothing is due until you approve it.</li>
-        <li>Fixed scope projects: 50% advance to begin, 50% on delivery. Longer projects are split into milestones.</li>
-        <li>Payments are collected securely through Razorpay Payment Links or bank transfer. International clients pay via Stripe, PayPal or wire.</li>
-        <li>Every payment is preceded by a written quote or invoice that states exactly what is being delivered.</li>
-      </ol>
-      <div class="callout">Not sure where to start? <a href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a free call</a> and I will tell you honestly what you need, including when the answer is that you do not need me for this.</div>
-    </div>
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Full-stack web apps</h3>
+            <p>Real products with logins, roles, dashboards and payments. My core work.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Education</span><span class="tag">Healthcare</span><span class="tag">Coaching</span><span class="tag">Services</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">Django</span><span class="chip">FastAPI</span><span class="chip">HTMX</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="dash"></div></div><div class="ex-meta"><div class="ex-name">Learning platform</div><div class="ex-desc">Courses, quizzes and students, one login per institute.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="dash"></div></div><div class="ex-meta"><div class="ex-name">Coaching-center CRM</div><div class="ex-desc">Leads, batches, payments and reminders in one place.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="dash"></div></div><div class="ex-meta"><div class="ex-name">Clinic ERP</div><div class="ex-desc">Appointments, records and billing for a practice.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="dash"></div></div><div class="ex-meta"><div class="ex-name">Client portal</div><div class="ex-desc">A private area where your customers log in and act.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Custom frontend</h3>
+            <p>Just the interface: a design turned into a fast, working screen.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">SaaS</span><span class="tag">Dashboards</span><span class="tag">Internal tools</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">JavaScript</span><span class="chip">HTMX</span><span class="chip">Tailwind CSS</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="dash"></div></div><div class="ex-meta"><div class="ex-name">Admin dashboard UI</div><div class="ex-desc">Tables, charts and forms that feel quick to use.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="web"></div></div><div class="ex-meta"><div class="ex-name">Design to code</div><div class="ex-desc">Your Figma turned into a pixel-faithful page.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Interactive forms</div><div class="ex-desc">Multi-step forms with validation and saving.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Custom backend services</h3>
+            <p>The engine behind an app or website: data, logic and integrations.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Fintech</span><span class="tag">SaaS</span><span class="tag">Mobile backends</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">FastAPI</span><span class="chip">Django</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="api"></div></div><div class="ex-meta"><div class="ex-name">REST API</div><div class="ex-desc">A documented API other apps can build on.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="api"></div></div><div class="ex-meta"><div class="ex-name">Payments integration</div><div class="ex-desc">Razorpay or Stripe wired in with receipts.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Webhook service</div><div class="ex-desc">Connect two systems so they stay in sync.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="chapter-cta"><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Talk about a web project <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- ============ 02 AI ============ -->
+    <section class="chapter chapter-alt" id="ai" style="--chap:#2f8fd0">
+      <div class="wrap">
+        <div class="chapter-head">
+          <span class="chapter-num">02</span>
+          <p class="k">Discipline / 02</p>
+          <h2>AI Systems</h2>
+          <p>Software that reads, answers and acts. Grounded in your own content, so it is useful rather than a gimmick.</p>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Knowledge assistants (RAG)</h3>
+            <p>A chatbot that answers from your documents, with sources, not guesses.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Support</span><span class="tag">Legal</span><span class="tag">Internal wikis</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">Python</span><span class="chip">LLMs</span><span class="chip">pgvector</span><span class="chip">Pinecone</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="chat"></div></div><div class="ex-meta"><div class="ex-name">Chat over your docs</div><div class="ex-desc">Ask questions, get answers with citations.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="chat"></div></div><div class="ex-meta"><div class="ex-name">Policy Q&amp;A bot</div><div class="ex-desc">Staff get instant answers from the handbook.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Knowledge search</div><div class="ex-desc">Search that understands meaning, not just words.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Chatbots &amp; assistants</h3>
+            <p>Helpful bots on your site or WhatsApp that answer and capture leads.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">E-commerce</span><span class="tag">Support</span><span class="tag">Lead generation</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">FastAPI</span><span class="chip">LLM APIs</span><span class="chip">WhatsApp</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="chat"></div></div><div class="ex-meta"><div class="ex-name">Website support bot</div><div class="ex-desc">Answers common questions, hands off when stuck.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="phone"></div></div><div class="ex-meta"><div class="ex-name">WhatsApp assistant</div><div class="ex-desc">Take orders or bookings inside a chat.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="chat"></div></div><div class="ex-meta"><div class="ex-name">Lead qualifier</div><div class="ex-desc">Asks the right questions, books the good ones.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>AI agents &amp; automations</h3>
+            <p>Systems that do multi-step work on their own and report back.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Recruiting</span><span class="tag">Research</span><span class="tag">Operations</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">Python</span><span class="chip">Tool calling</span><span class="chip">Queues</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Resume screener</div><div class="ex-desc">Ranks applicants against a role, with reasons.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Research assistant</div><div class="ex-desc">Gathers and summarises sources into a brief.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Inbox triage</div><div class="ex-desc">Sorts and drafts replies for a busy team.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>AI features in your product</h3>
+            <p>Drop intelligence into an app you already have.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">SaaS</span><span class="tag">Content</span><span class="tag">Productivity</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">LLM APIs</span><span class="chip">Embeddings</span><span class="chip">Python</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="code"></div></div><div class="ex-meta"><div class="ex-name">Summarise &amp; classify</div><div class="ex-desc">Turn long text into tags and short summaries.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Semantic search</div><div class="ex-desc">Find things by meaning across your data.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="web"></div></div><div class="ex-meta"><div class="ex-name">Smart autofill</div><div class="ex-desc">Suggestions that save your users typing.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="chapter-cta"><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Talk about an AI project <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- ============ 03 DATA ============ -->
+    <section class="chapter" id="data" style="--chap:#4a7bd0">
+      <div class="wrap">
+        <div class="chapter-head">
+          <span class="chapter-num">03</span>
+          <p class="k">Discipline / 03</p>
+          <h2>Data Engineering</h2>
+          <p>Move data where it needs to go, then make it easy to read. From messy sources to a clean dashboard.</p>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Pipelines &amp; ETL</h3>
+            <p>Automatically pull data from many places into one tidy home.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Analytics</span><span class="tag">Finance</span><span class="tag">Operations</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">Python</span><span class="chip">Celery</span><span class="chip">PostgreSQL</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Source to warehouse</div><div class="ex-desc">Sync apps and sheets into one database.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Scheduled jobs</div><div class="ex-desc">Nightly imports and clean-ups that just run.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Dashboards &amp; analytics</h3>
+            <p>See how the business is doing without exporting spreadsheets.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Sales</span><span class="tag">Operations</span><span class="tag">Marketing</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Plotly</span><span class="chip">Streamlit</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="dash"></div></div><div class="ex-meta"><div class="ex-name">Sales dashboard</div><div class="ex-desc">Revenue, pipeline and targets at a glance.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="dash"></div></div><div class="ex-meta"><div class="ex-name">Operations board</div><div class="ex-desc">The few numbers your team checks daily.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="chart"></div></div><div class="ex-meta"><div class="ex-name">Trend analytics</div><div class="ex-desc">Growth and cohorts over time, made clear.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Scraping &amp; collection</h3>
+            <p>Gather data from the web, reliably and on a schedule.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Jobs</span><span class="tag">Pricing</span><span class="tag">Research</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">Python</span><span class="chip">Playwright</span><span class="chip">Requests</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Job-board scraper</div><div class="ex-desc">Collect listings into one searchable table.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Price monitor</div><div class="ex-desc">Track competitor prices and get alerts.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Lead list builder</div><div class="ex-desc">Turn public data into a clean prospect list.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Reporting &amp; data APIs</h3>
+            <p>Serve your numbers to other tools, or turn reports into visuals.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">QA</span><span class="tag">Internal tools</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">FastAPI</span><span class="chip">Streamlit</span><span class="chip">Plotly</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="chart"></div></div><div class="ex-meta"><div class="ex-name">Report visualizer</div><div class="ex-desc">Turn raw test or sales reports into charts.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="api"></div></div><div class="ex-meta"><div class="ex-name">Data export API</div><div class="ex-desc">Let other systems pull your data safely.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="chapter-cta"><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Talk about a data project <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- ============ 04 QA ============ -->
+    <section class="chapter chapter-alt" id="qa" style="--chap:#16a394">
+      <div class="wrap">
+        <div class="chapter-head">
+          <span class="chapter-num">04</span>
+          <p class="k">Discipline / 04</p>
+          <h2>QA &amp; Test Automation</h2>
+          <p>My first craft, and 7+ years of it. Catch bugs before your users do, automatically, on every change.</p>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>UI automation</h3>
+            <p>Robots that click through your app the way a person would.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Web apps</span><span class="tag">E-commerce</span><span class="tag">SaaS</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">Playwright</span><span class="chip">Selenium</span><span class="chip">Cypress</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="test"></div></div><div class="ex-meta"><div class="ex-name">Playwright framework</div><div class="ex-desc">A full UI, API and DB suite with reporting.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="test"></div></div><div class="ex-meta"><div class="ex-name">Cross-browser suite</div><div class="ex-desc">The same tests across Chrome, Firefox, Safari.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="test"></div></div><div class="ex-meta"><div class="ex-name">Checkout tests</div><div class="ex-desc">Guard the flow that actually makes money.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>API &amp; database testing</h3>
+            <p>Check the engine, not just the screen, so data stays correct.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Backends</span><span class="tag">Fintech</span><span class="tag">Integrations</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">PyTest</span><span class="chip">REST Assured</span><span class="chip">SQL</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="test"></div></div><div class="ex-meta"><div class="ex-name">API regression suite</div><div class="ex-desc">Every endpoint checked on every release.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Database validation</div><div class="ex-desc">Confirm the data is right after each action.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Agentic QA</h3>
+            <p>AI that helps write and maintain tests, so coverage keeps up.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Fast-moving products</span><span class="tag">Startups</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">LLMs</span><span class="chip">Playwright</span><span class="chip">Python</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">AI test generation</div><div class="ex-desc">Draft tests from user stories or flows.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Self-healing tests</div><div class="ex-desc">Tests that adapt when the UI shifts a little.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>CI pipelines &amp; reporting</h3>
+            <p>Run the whole suite automatically and get a readable report.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Any team</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">GitHub Actions</span><span class="chip">Jenkins</span><span class="chip">Allure</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">CI test pipeline</div><div class="ex-desc">Tests run on every push, before it ships.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="dash"></div></div><div class="ex-meta"><div class="ex-name">Allure reporting</div><div class="ex-desc">Clear pass and fail summaries for the team.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="chapter-cta"><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Talk about testing <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- ============ 05 DEVOPS ============ -->
+    <section class="chapter" id="devops" style="--chap:#5b7cc9">
+      <div class="wrap">
+        <div class="chapter-head">
+          <span class="chapter-num">05</span>
+          <p class="k">Discipline / 05</p>
+          <h2>DevOps &amp; Infrastructure</h2>
+          <p>Ship safely and sleep well. Deploys that do not break, and alerts before your users notice.</p>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Docker &amp; containers</h3>
+            <p>Package your app so it runs the same everywhere.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Any app</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">Docker</span><span class="chip">Compose</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Containerize an app</div><div class="ex-desc">One command to run it anywhere, reliably.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Local dev parity</div><div class="ex-desc">Your laptop matches production, no surprises.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>CI/CD pipelines</h3>
+            <p>Automate the path from a commit to a live deploy.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Startups</span><span class="tag">Product teams</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">GitHub Actions</span><span class="chip">Jenkins</span><span class="chip">Docker</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Build &amp; deploy</div><div class="ex-desc">Test, build and release with one merge.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Zero-downtime deploys</div><div class="ex-desc">Ship updates without taking the site down.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Cloud deployment</h3>
+            <p>Get your app live on solid, affordable infrastructure.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Startups</span><span class="tag">SaaS</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">Cloudflare</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="flow"></div></div><div class="ex-meta"><div class="ex-name">Deploy to AWS</div><div class="ex-desc">Containers on ECS with a managed database.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="web"></div></div><div class="ex-meta"><div class="ex-name">Static on Cloudflare</div><div class="ex-desc">Fast global hosting for near-zero cost.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Managed database</div><div class="ex-desc">Backups and scaling handled for you.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Monitoring &amp; observability</h3>
+            <p>Know how the system is doing, and hear about issues first.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Production apps</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Logs</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="dash"></div></div><div class="ex-meta"><div class="ex-name">Metrics dashboard</div><div class="ex-desc">Health and usage of your app in one view.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Alerting</div><div class="ex-desc">Get a message the moment something breaks.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="chart"></div></div><div class="ex-meta"><div class="ex-name">Uptime checks</div><div class="ex-desc">Prove the site is up, track slow spots.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="chapter-cta"><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Talk about infrastructure <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- ============ 06 MOBILE ============ -->
+    <section class="chapter chapter-alt" id="mobile" style="--chap:#12a19a">
+      <div class="wrap">
+        <div class="chapter-head">
+          <span class="chapter-num">06</span>
+          <p class="k">Discipline / 06</p>
+          <h2>Mobile Apps</h2>
+          <p>Apps for phones, and the backends that power them. One codebase across Android and iOS where it makes sense.</p>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Cross-platform apps</h3>
+            <p>One app that runs on both Android and iOS.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Consumer</span><span class="tag">Services</span><span class="tag">Delivery</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">Flutter</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="phone"></div></div><div class="ex-meta"><div class="ex-name">Customer app</div><div class="ex-desc">Your product in your customers' pockets.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="phone"></div></div><div class="ex-meta"><div class="ex-name">Booking app</div><div class="ex-desc">Browse, book and pay on the phone.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="phone"></div></div><div class="ex-meta"><div class="ex-name">Delivery app</div><div class="ex-desc">Orders, tracking and status for the field.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Progressive web apps</h3>
+            <p>A website that installs and works like an app, no store needed.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Internal tools</span><span class="tag">SaaS</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">JavaScript</span><span class="chip">Service Workers</span><span class="chip">HTMX</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="phone"></div></div><div class="ex-meta"><div class="ex-name">Installable web app</div><div class="ex-desc">Add-to-home-screen, works like a native app.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="phone"></div></div><div class="ex-meta"><div class="ex-name">Offline-first tool</div><div class="ex-desc">Keeps working when the signal drops.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="subcat reveal">
+          <div class="subcat-info">
+            <h3>Mobile backends</h3>
+            <p>The API, accounts and notifications behind an app.</p>
+            <p class="meta-label">Domains</p>
+            <div class="tag-row"><span class="tag">Any app</span></div>
+            <p class="meta-label">Stack</p>
+            <div class="stack-row"><span class="chip">FastAPI</span><span class="chip">Auth</span><span class="chip">Push</span></div>
+          </div>
+          <div class="shelf-wrap"><div class="shelf">
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="api"></div></div><div class="ex-meta"><div class="ex-name">App API &amp; accounts</div><div class="ex-desc">Sign-up, login and data for your app.</div></div></article>
+            <article class="ex-card"><div class="ex-thumb"><div data-mk="rows"></div></div><div class="ex-meta"><div class="ex-name">Push notifications</div><div class="ex-desc">Reach users at the right moment.</div></div></article>
+          </div></div>
+        </div>
+
+        <div class="chapter-cta"><a class="link-arrow" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Talk about a mobile app <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- ============ HOW QUOTING WORKS ============ -->
+    <section class="section">
+      <div class="prose-wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">How quoting works</p>
+          <h2>From a call to a fixed quote</h2>
+        </div>
+        <div class="prose reveal" style="padding:0">
+          <ol>
+            <li>We start with a free call, so I understand what you need before anything is priced.</li>
+            <li>You receive a written scope, a timeline and a fixed quote. Nothing is due until you approve it.</li>
+            <li>Fixed-scope projects run 50% to begin and 50% on delivery, with milestones for longer work.</li>
+            <li>Payments are collected securely through Razorpay Payment Links or bank transfer. International clients pay via Stripe, PayPal or wire.</li>
+            <li>Every payment is preceded by a written quote or invoice that states exactly what is being delivered.</li>
+          </ol>
+          <div class="callout">Not sure which of these fits? <a href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a free call</a> and I will tell you honestly what you need, including when the answer is that you do not need me for this.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="deep-band" style="padding:88px 0">
+      <div class="wrap reveal">
+        <p class="eyebrow">Work with me</p>
+        <h2>Found something that fits?</h2>
+        <p>Tell me which area caught your eye and what you are trying to do. You will hear back within 24 hours.</p>
+        <div class="hero-actions">
+          <a class="btn btn-amber" href="https://cal.com/chaitanyavaddi/project-enquiry" target="_blank" rel="noopener">Book a call <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="/contact.html">Other ways to reach me</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="/">Chaitanya <span class="brand-dot">Vaddi</span></a>
-          <p>Software engineer in Hyderabad, India. Python, Django and FastAPI, for clients worldwide.</p>
-        </div>
-        <div class="footer-col">
-          <h3>Site</h3>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/#work">Work</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Legal</h3>
-          <ul>
-            <li><a href="/privacy.html">Privacy policy</a></li>
-            <li><a href="/terms.html">Terms and conditions</a></li>
-            <li><a href="/refunds.html">Refunds and cancellations</a></li>
-            <li><a href="/delivery.html">Service delivery</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Elsewhere</h3>
-          <ul>
-            <li><a href="https://github.com/chaitanyavaddi" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/vaddichaitanya/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="mailto:hellochaitanyavaddi@gmail.com">Email</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Chaitanya Vaddi. All rights reserved.</span>
-        <span class="sdg">Soli Deo Gloria · to God alone be the glory</span>
-        <span>Set in Bricolage Grotesque and JetBrains Mono.</span>
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
   <script src="/assets/js/main.js" defer></script>
 </body>
