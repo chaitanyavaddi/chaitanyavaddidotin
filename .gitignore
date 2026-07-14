@@ -8,3 +8,10 @@ sdet_chaitanya_vaddi_v3.pdf
 vibe/
 cv-half-folded.png
 cv-half-folded-trans.png
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
