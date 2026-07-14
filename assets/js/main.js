@@ -192,4 +192,64 @@
       '<div class="marq"><div class="marq-track">' + chips + chips + '</div></div>';
     wrap.appendChild(box);
   });
+
+  /* ---------- discipline accordions ---------- */
+  function setChapter(ch, open) {
+    ch.classList.toggle("open", open);
+    var btn = ch.querySelector(".chapter-toggle");
+    if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) ch.querySelectorAll(".reveal").forEach(function (e) { e.classList.add("is-in"); });
+  }
+
+  document.querySelectorAll(".chapter").forEach(function (ch) {
+    var head = ch.querySelector(".chapter-head");
+    var wrap = ch.querySelector(".wrap");
+    if (!head || !wrap) return;
+
+    // move everything after the head into a collapsible body
+    var body = document.createElement("div");
+    body.className = "chapter-body";
+    body.id = ch.id + "-body";
+    var n = head.nextSibling;
+    while (n) { var next = n.nextSibling; body.appendChild(n); n = next; }
+    wrap.appendChild(body);
+
+    // clickable toggle covering the header + a chevron
+    var title = ch.querySelector("h2");
+    var btn = document.createElement("button");
+    btn.className = "chapter-toggle";
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-controls", body.id);
+    btn.innerHTML = '<span class="sr-only">Show ' + (title ? title.textContent : "section") + ' categories</span>';
+    head.appendChild(btn);
+
+    var chev = document.createElement("span");
+    chev.className = "chev";
+    chev.setAttribute("aria-hidden", "true");
+    chev.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
+    head.appendChild(chev);
+
+    btn.addEventListener("click", function () {
+      setChapter(ch, !ch.classList.contains("open"));
+    });
+  });
+
+  // open a chapter when its index pill is clicked, or when linked by hash
+  function openFromHash() {
+    var id = (location.hash || "").replace("#", "");
+    if (!id) return;
+    var ch = document.getElementById(id);
+    if (ch && ch.classList.contains("chapter")) {
+      setChapter(ch, true);
+      ch.scrollIntoView();
+    }
+  }
+  document.querySelectorAll(".cap-index a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      var ch = document.getElementById((a.getAttribute("href") || "").replace("#", ""));
+      if (ch) setChapter(ch, true);
+    });
+  });
+  window.addEventListener("hashchange", openFromHash);
+  openFromHash();
 })();
